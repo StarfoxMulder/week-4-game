@@ -10,9 +10,10 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 
-	<body class="container">
+	<body>
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-4 col-md-offset-8">
+			<div class="col-md-12" id="stars">
 				<h1>Star Wars RPG!</h1>
 			</div>
 		</div>
@@ -24,64 +25,104 @@
 		</div>
 		<div class="row" id="charSelectRow">
 			<div class="col-md-2">
-				<div class="charContainer 0">
+				<div class="charContainer">
+					<p id="charNameLine0"></p>
+					<img id="charImgLine0">
+					<p id="charHPCounter0"></p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="charContainer">
+					<p id="charNameLine1"></p>
+					<img id="charImgLine1">
+					<p id="charHPCounter1"></p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="charContainer">
+					<p id="charNameLine2"></p>
+					<img id="charImgLine2">
+					<p id="charHPCounter2"></p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="charContainer">
+					<p id="charNameLine3"></p>
+					<img id="charImgLine3">
+					<p id="charHPCounter3"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Your Character</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+			 	<div id="yourChar"></div>
+			 </div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Enemies Available To Attack</h2>
+			</div>
+		</div>
+		<div class="row" id="enemyRow">
+			<div class="col-md-2">
+				<div class="enemyContainer 0">
 					<p class="charNameLine 0"></p>
 					<img class="charImgLine 0">
 					<p class="charHPCounter 0"></p>
 				</div>
 			</div>
 			<div class="col-md-2">
-				<div class="charContainer 1">
+				<div class="enemyContainer 1">
 					<p class="charNameLine 1"></p>
 					<img class="charImgLine 1">
 					<p class="charHPCounter 1"></p>
 				</div>
 			</div>
 			<div class="col-md-2">
-				<div class="charContainer 2">
+				<div class="enemyContainer 2">
 					<p class="charNameLine 2"></p>
 					<img class="charImgLine 2">
 					<p class="charHPCounter 2"></p>
 				</div>
 			</div>
-			<div class="col-md-2">
-				<div class="charContainer 3">
-					<p class="charNameLine 3"></p>
-					<img class="charImgLine 3">
-					<p class="charHPCounter 3"></p>
-				</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Battle Section</h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<h2>Your Character</h2>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-danger">Attack!</button>
 			</div>
 		</div>
 
-		<div class="row" id="enemyRow">
-			<div class="col-md-2">
-				<div class="enemyContainer">
-					<p class="charNameLine"></p>
-					<img class="charImgLine">
-					<p class="charHPCounter"></p>
-				</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Defender</h2>
 			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-2">
-				<div class="charContainer">
-					<p class="charNameLine"></p>
-					<img class="charImgLine">
-					<p class="charHPCounter"></p>
-				</div>
+				<div id="defenderContainer"></div>
 			</div>
-			<div class="col-md-2">
-				<div class="charContainer">
-					<p class="charNameLine"></p>
-					<img class="charImgLine">
-					<p class="charHPCounter"></p>
-				</div>
-			</div>
-			
+		</div>
 
+		<div class="row">
+			<div class="col-md-5">
+				<div id="battleInfo"></div>
+			</div>
+		</div>
+
+	</div>
 	</body>
 
 </html>

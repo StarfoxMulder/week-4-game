@@ -1,9 +1,21 @@
 body {
-	background-image: url('assets/images/gameBkrnd1.jpg');
+	background-image: url('../images/Hoth1.jpg');
 }
 
 h1 {
 	font-family: 'Marcellus SC', serif;
+	color: #ffd700;
+	letter-spacing: 6px;
+	font-weight: 800;
+	font-size: 300%;
+	font-stretch: expanded;
+	text-align: right;
+}
+#stars {
+	margin-top: 5px;
+	background-image: url('../images/stars2.jpg');
+	max-height: 70px;
+	width: 100%;
 }
 
 h2 {
@@ -17,14 +29,32 @@ h3 {
 	opacity: 0.7;
 }
 
+p {
+	font-family: 'Share', cursive;
+	font-size: 16px;
+	text-align: center;
+}
+
 .charContainer {
 	font-family: 'Share', cursive;
 	border: 2px solid green;
 	height: 150px;
 	padding: 0 10px;
 }
-
 .charContainer > img {
+	width: 100%;
+	height: 100px;
+}
+
+#yourChar {
+	font-family: 'Share', cursive;
+	border: 2px solid green;
+	height: 150px;
+	padding: 0 10px;
+	background: #cfebfd;
+
+}
+#yourChar > img {
 	width: 100%;
 	height: 100px;
 }
@@ -35,11 +65,24 @@ h3 {
 	height: 150px;
 	padding: 0 10px;
 }
+.enemyContainer > img {
+	width: 100%;
+	height: 100px;
+}
 
-.defenderContainer {
+#defenderContainer {
 	border: 2px solid green;
 	background: black;
 	color: white;
 	height: 150px;
 	padding: 0 10px;
+}
+#defenderContainer > img {
+	width: 100%;
+	height: 100px;
+}
+
+#battleInfo {
+	font-family: 'Marcellus SC', serif;
+	font-size: 16px;
 }
