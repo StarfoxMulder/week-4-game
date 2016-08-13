@@ -62,7 +62,7 @@ p {
 	height: 100px;
 }
 
-.enemyContainer {
+#enemy0, #enemy1, #enemy2 {
 	border: 2px solid black;
 	background: red;
 	height: 160px;

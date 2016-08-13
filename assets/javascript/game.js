@@ -38,6 +38,16 @@ window.onload = function() {
 
 	gameSetup();
 
+	$('.charContainer').click(function(event) {
+		gameplayDivDisplay();
+
+		$(this).appendTo('#yourChar');
+
+
+
+
+	});
+
 //Pretty standard hardcoding of initial char setup since I couldn't
 //  figure out how to iterate the array index through element id.
 	function gameSetup() {
@@ -58,11 +68,20 @@ window.onload = function() {
 		document.getElementById("charImgLine3").setAttribute("src", characterArray[3].charImg);
 		document.getElementById("charHPCounter3").innerHTML = characterArray[3].startingHP;
 
-// Hiding character, enemy, and defender containers
-		document.getElementById("yourChar").setAttribute("display", "none");
-		document.getElementById("enemyRow").setAttribute("display", "none");
-		document.getElementById("defenderContainer").setAttribute("display", "none");
 	};
+
+//Un-hide the yourChar, enemy, and defender divs; move the user's selection to yourChar;
+//	populate the enemy divs with the remaining characters.
+	function gameplayDivDisplay() {
+
+		document.getElementById('yourChar').removeAttribute("display", "none");
+		document.getElementById('enemy0').removeAttribute("display", "none");
+		document.getElementById('enemy1').removeAttribute("display", "none");
+		document.getElementById('enemy1').removeAttribute("display", "none");
+		document.getElementById('defenderContainer').removeAttribute("display", "none");
+	};
+
+
 
 //populate initial character divs with appropriate information
 /*
