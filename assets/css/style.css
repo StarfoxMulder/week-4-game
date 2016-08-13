@@ -37,6 +37,10 @@ p {
 	margin: 5px 0;
 }
 
+
+#charSelectRow{
+	visibility: visible;
+}
 .charContainer {
 	font-family: 'Share', cursive;
 	border: 2px solid green;
@@ -49,30 +53,41 @@ p {
 	height: 100px;
 }
 
+
+
 #yourChar {
 	font-family: 'Share', cursive;
 	border: 2px solid green;
 	height: 160px;
 	padding: 0 10px;
 	background: #cfebfd;
-	display: none;
 }
 #yourChar > img {
 	width: 100%;
 	height: 100px;
 }
 
+
+
 #enemy0, #enemy1, #enemy2 {
 	border: 2px solid black;
 	background: red;
 	height: 160px;
 	padding: 0 10px;
-	display: none;
+	visibility: hidden;
 }
 .enemyContainer > img {
 	width: 100%;
 	height: 100px;
 }
+#enemy0Target, #enemy1Target, #enemy2Target, #defenderTarget {
+	display: none;
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+}
+
+
 
 #defenderContainer {
 	border: 2px solid green;
@@ -80,12 +95,14 @@ p {
 	color: white;
 	height: 160px;
 	padding: 0 10px;
-	display: none;
+	visibility: hidden;
 }
 #defenderContainer > img {
 	width: 100%;
 	height: 100px;
 }
+
+
 
 #battleInfo {
 	font-family: 'Marcellus SC', serif;

@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
 	
 	var userChar = "";
 	var userHP = 0;
@@ -38,12 +38,12 @@ window.onload = function() {
 
 	gameSetup();
 
-	$('.charContainer').click(function(event) {
+	$('.charContainer').one('click', function(event) {
+		$(this).attr('id', 'yourChar');
+		$(this).appendTo('#yourCharTarget');
+		//$("#yourCharTarget").remove();
+
 		gameplayDivDisplay();
-
-		$(this).appendTo('#yourChar');
-
-
 
 
 	});
@@ -74,11 +74,41 @@ window.onload = function() {
 //	populate the enemy divs with the remaining characters.
 	function gameplayDivDisplay() {
 
-		document.getElementById('yourChar').removeAttribute("display", "none");
+		//document.getElementById('yourChar').removeAttribute("display", "none");
+		//document.getElementById('yourChar').setAttribute("display", "initial");
 		document.getElementById('enemy0').removeAttribute("display", "none");
+		document.getElementById('enemy0').setAttribute("display", "initial");
 		document.getElementById('enemy1').removeAttribute("display", "none");
-		document.getElementById('enemy1').removeAttribute("display", "none");
+		document.getElementById('enemy1').setAttribute("display", "initial");
+		document.getElementById('enemy2').removeAttribute("display", "none");
+		document.getElementById('enemy2').setAttribute("display", "initial");
 		document.getElementById('defenderContainer').removeAttribute("display", "none");
+		document.getElementById('defenderContainer').setAttribute("display", "initial");
+		document.getElementById('charSelectRow').removeAttribute("visibility", "visible");
+		document.getElementById('charSelectRow').setAttribute("display", "none");
+	};
+
+//Selecting the p, img, and 2nd p of each remaining character from the selection row
+//	then populating the innerHTML of each enemy div with a character's attributes.
+	function populateEnemies() {
+		$('.charContainer').each(function(index){
+
+		})
+		//for(var i = 0; i < characterArray -1; i++) {
+			$('.charSelectRow').children('.charContainer').each(function(){
+				$(this)
+			})
+		//}
+
+	};
+
+	function popEnemy2() {
+		$('.charContainer').each(function(index){
+
+			for(var i = 0; i < characterArray -1; i++) {
+
+			}
+		})
 	};
 
 
@@ -95,4 +125,4 @@ window.onload = function() {
 		}
 	};
 */
-};
+});
