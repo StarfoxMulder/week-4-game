@@ -10,6 +10,7 @@ h1 {
 	font-size: 300%;
 	font-stretch: expanded;
 	text-align: right;
+	margin-top: 10px;
 }
 #stars {
 	margin-top: 5px;
@@ -33,13 +34,15 @@ p {
 	font-family: 'Share', cursive;
 	font-size: 16px;
 	text-align: center;
+	margin: 5px 0;
 }
 
 .charContainer {
 	font-family: 'Share', cursive;
 	border: 2px solid green;
-	height: 150px;
+	height: 160px;
 	padding: 0 10px;
+	background: #D4FDCF;
 }
 .charContainer > img {
 	width: 100%;
@@ -49,10 +52,10 @@ p {
 #yourChar {
 	font-family: 'Share', cursive;
 	border: 2px solid green;
-	height: 150px;
+	height: 160px;
 	padding: 0 10px;
 	background: #cfebfd;
-
+	display: none;
 }
 #yourChar > img {
 	width: 100%;
@@ -62,8 +65,9 @@ p {
 .enemyContainer {
 	border: 2px solid black;
 	background: red;
-	height: 150px;
+	height: 160px;
 	padding: 0 10px;
+	display: none;
 }
 .enemyContainer > img {
 	width: 100%;
@@ -74,8 +78,9 @@ p {
 	border: 2px solid green;
 	background: black;
 	color: white;
-	height: 150px;
+	height: 160px;
 	padding: 0 10px;
+	display: none;
 }
 #defenderContainer > img {
 	width: 100%;
@@ -85,4 +90,9 @@ p {
 #battleInfo {
 	font-family: 'Marcellus SC', serif;
 	font-size: 16px;
+}
+
+footer {
+	height: 30px;
+	margin: 15px 0;
 }

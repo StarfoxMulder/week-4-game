@@ -12,30 +12,29 @@ window.onload = function() {
 			'charImg': 'assets/images/BobaFett1.jpg',
 			'startingHP': '135',
 			'initialAtkVal': '',
-			'counterAtkVal': '',
+			'counterAtkVal': ''
 		},
 		{
 			'charName': 'Dash Rendar',
 			'charImg': 'assets/images/DashRendar1.jpg',
 			'startingHP': '130',
 			'initialAtkVal': '',
-			'counterAtkVal': '',
+			'counterAtkVal': ''
 		},
 		{
 			'charName': 'Lando Calrissian',
 			'charImg': 'assets/images/Lando1.jpg',
 			'startingHP': '125',
 			'initialAtkVal': '',
-			'counterAtkVal': '',
+			'counterAtkVal': ''
 		},
 		{
 			'charName': 'Leia Organa Solo',
 			'charImg': 'assets/images/LeiaOrgana1.jpg',
 			'startingHP': '120',
 			'initialAtkVal': '',
-			'counterAtkVal': '',
-		}
-	];
+			'counterAtkVal': ''
+		}];
 
 	gameSetup();
 
@@ -60,8 +59,10 @@ window.onload = function() {
 		document.getElementById("charHPCounter3").innerHTML = characterArray[3].startingHP;
 
 // Hiding character, enemy, and defender containers
-		document.getElementById("yourChar").setAttribute("visibility", "hidden");
-	}
+		document.getElementById("yourChar").setAttribute("display", "none");
+		document.getElementById("enemyRow").setAttribute("display", "none");
+		document.getElementById("defenderContainer").setAttribute("display", "none");
+	};
 
 //populate initial character divs with appropriate information
 /*
@@ -75,4 +76,4 @@ window.onload = function() {
 		}
 	};
 */
-}
+};
