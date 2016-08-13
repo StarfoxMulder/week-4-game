@@ -38,12 +38,57 @@ $(document).ready(function() {
 
 	gameSetup();
 
-	$('.charContainer').one('click', function(event) {
+	$('.charContainer').one('click', function(event) { //'.one()' isn't working as described; can't figure out...
+		var target = $( event.target );
+
 		$(this).attr('id', 'yourChar');
 		$(this).appendTo('#yourCharTarget');
 		//$("#yourCharTarget").remove();
 
 		gameplayDivDisplay();
+		popEnemy3();
+
+		if ($(this).is('#c0')) {
+			en0 = document.getElementById('#c1');
+			en1 = document.getElementById('#c2');
+			en2 = document.getElementById('#c3');
+
+			document.getElementById("enemy0").innerHTML = en0;
+			document.getElementById("enemy1").innerHTML = en1;
+			document.getElementById("enemy2").innerHTML = en2;
+
+			$("#charSelectRow").remove();
+		} else if ($(this).is('#c1')) {
+			en0 = document.getElementById('#c0');
+			en1 = document.getElementById('#c2');
+			en2 = document.getElementById('#c3');
+
+			document.getElementById("enemy0").innerHTML = en0;
+			document.getElementById("enemy1").innerHTML = en1;
+			document.getElementById("enemy2").innerHTML = en2;
+
+			$("#charSelectRow").remove();
+		} else if ($(this).is('#c2')) {
+			en0 = document.getElementById('#c0');
+			en1 = document.getElementById('#c1');
+			en2 = document.getElementById('#c3');
+
+			document.getElementById("enemy0").innerHTML = en0;
+			document.getElementById("enemy1").innerHTML = en1;
+			document.getElementById("enemy2").innerHTML = en2;
+
+			$("#charSelectRow").remove();
+		} else if ($(this).is('#c3')) {
+			en0 = document.getElementById('#c0');
+			en1 = document.getElementById('#c1');
+			en2 = document.getElementById('#c2');
+
+			document.getElementById("enemy0").innerHTML = en0;
+			document.getElementById("enemy1").innerHTML = en1;
+			document.getElementById("enemy2").innerHTML = en2;
+
+			$("#charSelectRow").remove();
+		};
 
 
 	});
@@ -86,6 +131,7 @@ $(document).ready(function() {
 		document.getElementById('defenderContainer').setAttribute("display", "initial");
 		document.getElementById('charSelectRow').removeAttribute("visibility", "visible");
 		document.getElementById('charSelectRow').setAttribute("display", "none");
+
 	};
 
 //Selecting the p, img, and 2nd p of each remaining character from the selection row
@@ -103,13 +149,27 @@ $(document).ready(function() {
 	};
 
 	function popEnemy2() {
-		$('.charContainer').each(function(index){
-
-			for(var i = 0; i < characterArray -1; i++) {
-
-			}
-		})
+		$('.charContainer').each(function(index, element){
+			if (index == '#enemy'+index+'Target'){
+				$(this).appendTo('#enemy'+index+'Target');
+				console.log(index); //nothing shows, so I know I'm doing something wrong....
+			};
+		});
 	};
+
+	function popEnemy3() {
+		$('.charContainer').each(function(index, element){
+			if (index == '#enemy'+index+'Target'){
+				$(this).appendTo('#enemy'+index+'Target');
+			};
+		});
+	};
+
+//Attack buton battle logic
+	$('.btn-danger').click(function() {
+
+
+	});
 
 
 
